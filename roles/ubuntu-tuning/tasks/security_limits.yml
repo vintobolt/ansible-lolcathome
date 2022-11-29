@@ -1,0 +1,56 @@
+---
+- name: soft limit nofile
+  pam_limits:
+    domain: vintobolt
+    limit_type: soft
+    limit_item: nofile
+    value: 8194308
+
+- name: hard limit nofile
+  pam_limits:
+    domain: vintobolt
+    limit_type: hard
+    limit_item: nofile
+    value: 8194308
+
+- name: soft limit nofile for root user
+  pam_limits:
+    domain: root
+    limit_type: soft
+    limit_item: nofile
+    value: 8194308
+
+- name: hard limit nofile for root user
+  pam_limits:
+    domain: root
+    limit_type: hard
+    limit_item: nofile
+    value: 8194308
+
+- name: soft limit nproc
+  pam_limits:
+    domain: vintobolt
+    limit_type: soft
+    limit_item: nproc
+    value: 8194308
+
+- name: hard limit nproc
+  pam_limits:
+    domain: vintobolt
+    limit_type: hard
+    limit_item: nproc
+    value: 8194308
+
+- name: soft limit nproc for root user
+  pam_limits:
+    domain: root
+    limit_type: soft
+    limit_item: nproc
+    value: 8194308
+
+- name: hard limit nproc for root user
+  pam_limits:
+    domain: root
+    limit_type: hard
+    limit_item: nproc
+    value: 8194308

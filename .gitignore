@@ -1,0 +1,7 @@
+.vscode
+host_vars/*
+logs
+logs/*
+host_vars/*
+roles/samba/*
+roles/samba

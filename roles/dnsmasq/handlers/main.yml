@@ -1,0 +1,7 @@
+---
+# handlers file for roles/dnsmasq
+
+- name: Restart dnsmasq service
+  ansible.builtin.systemd:
+    name: dnsmasq
+    state: restarted

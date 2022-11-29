@@ -1,0 +1,13 @@
+---
+
+- name: Configure UFW
+  import_tasks: ufw.yml
+  when: ansible_facts['os_family'] == 'Debian'
+
+- name: Configure Sysctl params
+  import_tasks: sysctl.yml
+  when: ansible_facts['os_family'] == 'Debian'
+
+- name: Configure /etc/security/limits.conf
+  import_tasks: security_limits.yml
+  when: ansible_facts['os_family'] == 'Debian'

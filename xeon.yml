@@ -1,0 +1,7 @@
+---
+- hosts: xeon
+  become: true
+  roles:
+   - install-packages
+   - ubuntu-tuning
+   - dnsmasq
