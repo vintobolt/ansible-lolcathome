@@ -2,3 +2,5 @@
 
 1. `ansible-galaxy collection install community.docker`
 2. `ansible-galaxy collection install community.general`
+
+# Install Java 

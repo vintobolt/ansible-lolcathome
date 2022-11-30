@@ -1,0 +1,17 @@
+---
+# tasks file for roles/minikube
+- name: Install latest minikube deb package
+  apt:
+    deb: https://storage.googleapis.com/minikube/releases/latest/minikube_latest_amd64.deb
+    state: present
+    update_cache: true
+    cache_valid_time: 3600
+  become: true
+  become_user: root
+
+- name: Get kubectl latest binary
+  get_url:
+    url: https://storage.googleapis.com/kubernetes-release/release/v1.9.0/bin/linux/amd64/kubectl
+    dest: /usr/local/bin/kubectl
+    mode: 0755
+  become: true
