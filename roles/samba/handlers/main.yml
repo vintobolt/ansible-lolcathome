@@ -1,0 +1,8 @@
+---
+# handlers file for roles/samba
+
+- name: restart samba service
+  service:
+    name: samba
+    state: restarted
+    enabled: true

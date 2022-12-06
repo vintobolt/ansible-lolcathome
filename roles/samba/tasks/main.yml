@@ -1,0 +1,26 @@
+---
+# tasks file for roles/samba
+- name: Install samba ubuntu 22.04
+  apt:
+    name: samba
+    state: present
+
+- name: copy samba config
+  copy:
+    src: samba.conf
+    dest: /etc/samba/smb.conf
+    owner: root
+    group: root
+    mode: 0644
+  notify: restart samba service
+
+- name: start samba
+  service:
+    name: smbd
+    state: started
+    enabled: true
+
+- name: enable samba service
+  service:
+    name: smbd
+    enabled: true

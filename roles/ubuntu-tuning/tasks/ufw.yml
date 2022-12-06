@@ -64,3 +64,8 @@
   community.general.ufw:
     rule: allow
     port: '5432'
+
+- name: Allow samba ports
+  community.general.ufw:
+    rule: allow
+    name: Samba
